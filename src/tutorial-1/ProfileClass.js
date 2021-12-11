@@ -3,10 +3,7 @@ import React, { Component } from "react";
 export class ProfileClass extends Component {
   render() {
     const { name } = this.props;
-
     const { registredAt } = this.props;
-
-    console.log(registredAt);
 
     function montoToStr(num) {
       return num > 12 || num < 1
@@ -22,7 +19,8 @@ export class ProfileClass extends Component {
           Привет, <strong>{name.split(" ")[0]}!</strong>
         </div>
         <div>
-          Дата регистрации: {registredAt.getDate()} {montoToStr(registredAt.getMonth())} {registredAt.getFullYear()}
+          Дата регистрации: {registredAt.getDate()}{" "}
+          {montoToStr(registredAt.getMonth())} {registredAt.getFullYear()}
         </div>
       </div>
     );
