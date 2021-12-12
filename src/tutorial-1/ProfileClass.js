@@ -13,11 +13,13 @@ export class ProfileClass extends Component {
           )[num - 1];
     }
 
+    console.log(registredAt.toLocaleDateString().split('.')[0])
     return (
       <div className="profile_wrapper">
         <div className="title">
           Привет, <strong>{name.split(" ")[0]}!</strong>
         </div>
+        <div>{}</div>
         <div>
           Дата регистрации: {registredAt.getDate()}{" "}
           {montoToStr(registredAt.getMonth())} {registredAt.getFullYear()}
