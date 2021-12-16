@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.profile_wrapper {
+  width: 300px;
+  border:6px solid #ccc;
+  border-radius: 13px;
+  padding: 30px;
+  margin: 30px auto;
+}
+.title {
+  font-size: 20px;
+}
