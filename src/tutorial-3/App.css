@@ -114,13 +114,11 @@ body {
   transition: all 0.35s;
 }
 
+/* переворот иконки стрелочки */
 .tab.active label::after {
   transform: rotate(180deg);
   transition: .5s;
 }
 .tab label{
  pointer-events: none;
-}
-* {
-  transition: .5s;
 }
