@@ -19,13 +19,16 @@ const App = () => {
     console.log(comments);
   };
 
-  // const onMoveUser = (arr) => {
-  //   console.log('был клик',arr)
-  // }
+  const removeComment = (id) => {
+    setComments(comments.filter((item) => item.id !== id));
+  }
+
+ 
+
 
   return (
     <div className="App">
-      <List comments={comments} />
+      <List comments={comments} removeComment={removeComment} />
       <Form addComment={addComment} />
       {/* <button onClick={addComments}>ggg</button> */}
     </div>
