@@ -1,0 +1,10 @@
+.form_wrap {
+    width: 400px;
+    border:1px solid #ccc;
+    padding: 20px;
+}
+.form_wrap h2 {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 15px;
+}
