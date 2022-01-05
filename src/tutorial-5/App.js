@@ -4,14 +4,18 @@ import List from "./components/List/List";
 import Form from "./components/Form/Form";
 
 const App = () => {
-  const [comments, setComments] = useState(
-    JSON.parse(localStorage.getItem("comments")) || []
-  );
+
+
+  const [comments, setComments] = useState([]);
+
+   useEffect(() => {
+     const commentTo = JSON.parse(localStorage.getItem("comments")) || [];
+     setComments([...commentTo]);
+   }, []);
 
   useEffect(() => {
     localStorage.setItem("comments", JSON.stringify(comments));
   }, [comments]);
-
 
   const addComment = (user, e) => {
     e.preventDefault();
@@ -21,10 +25,7 @@ const App = () => {
 
   const removeComment = (id) => {
     setComments(comments.filter((item) => item.id !== id));
-  }
-
- 
-
+  };
 
   return (
     <div className="App">
